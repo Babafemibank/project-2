@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    max-width: 100%;
+}
+.container{
+    max-width: 100%;
+    display: grid;
+     grid-template-areas: 'header header  header right aside' 
+    'left main main main aside' 'footer footer  footer footer footer'
+    ; 
+    gap: 10px;
+    padding-top: 10px;
+    min-height: 90%;
+    position: relative;
+    margin: 0 5px;
+    overflow-x: hidden;
+}
+.daniel{
+    grid-area: header;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('bg-pattern-quotation.svg');
+    background-position: right 60px top ;
+    background-repeat: no-repeat;
+color:hsl(0, 0%, 100%) ;
+
+}
+.jonathan{
+    grid-area: right;
+    background-color: hsl(217, 19%, 35%);
+   color: hsl(0, 0%, 100%);
+}
+.kira{
+    grid-area: aside;
+   background-color:  hsl(0, 0%, 100%);
+   color: hsl(217, 19%, 35%);
+}
+.harmon{
+    grid-area: left;
+  background-color:  hsl(0, 0%, 100%);
+ color: hsl(217, 19%, 35%);
+
+}
+.abrams{
+    grid-area: main;
+background-color: hsl(219, 29%, 14%);
+color: hsl(0, 0%, 100%);
+}
+.footer{
+grid-area: footer;
+justify-content: space-around;
+text-align: center;
+background-color: hsl(217, 19%, 35%);
+color: hsl(0, 0%, 100%);
+font-size: 25px;
+font-weight: bold;
+}
+img.dark-bg{
+    border: 2px solid  hsl(0, 0%, 100%);
+    grid-area: head;
+}
+img.light-bg{
+    border: 2px solid  hsl(263, 55%, 52%);
+}
+.info{
+    transform: translate(65px, -43px);
+   
+}
+img{
+    border-radius: 50%;
+}
+.kira, .abrams, .daniel, .harmon, .jonathan{
+    padding: 10px;
+}
+.text{
+    margin-top: -25px;
+    margin-bottom: 25px;
+}
+a:visited{
+    color: red;
+}
+@media screen and (max-width: 960px) {
+    img{
+        width: 35px;
+        height: 35px;
+    }
+    .info{
+        transform: translate(45px, -36px);
+       
+    }
+}
+.text , .info, .test2 {
+    font-size: bold;
+}
+p + p{
+    opacity: 0.5;
+}
+h3 + p{
+    opacity: 0.7;
+}
+h3{
+    font-size: 21px;
+}
+@media screen and (max-width: 820px) {
+    img{
+        width: 30px;
+        height: 30px;  }
+        h3{
+            font-size: 18px;
+      
+    }
+    .info{
+        transform: translate(35px, -32px);
+        font-size: 14px;
+       
+    }
+}
+@media screen and (max-width: 682px) {
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    .info{
+        transform: translate(31px, -28px);
+        font-size: 12px;
+       
+    }
+    h3{
+        font-size: 14px;
+  
+}
+}
+.name{
+    white-space: nowrap;
+}
+@media screen and (max-width: 600px){
+    .container{
+        display: block;
+        width: 100%;
+        padding: 15px;
+     margin-right: 2.5%;
+     margin-left: 2.5%;
+    }
+    .kira, .abrams, .daniel, .harmon, .jonathan, .footer{
+        width: 95%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    h3{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 230px){
+.footer{
+    font-size: 15px;
+}
+}
